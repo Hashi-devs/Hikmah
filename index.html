@@ -15,27 +15,27 @@
 <link rel="icon" href="/img/favicon-192.png?v=2" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="/img/apple-touch.png?v=2">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="preload" href="fonts/Garet.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="fonts/FacultyGlyphic-Regular.woff" as="font" type="font/woff" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>try{if(localStorage.getItem('hikmah-theme')==='light')document.documentElement.classList.add('light')}catch(e){}</script>
 <style>
-@font-face{font-family:'Garet';src:url(fonts/Garet.woff) format('woff');font-weight:400;font-display:swap}
+@font-face{font-family:'Faculty Glyphic';src:url(fonts/FacultyGlyphic-Regular.woff) format('woff');font-weight:400;font-display:swap}
 :root{--bg:#0c0c0d;--card:#151517;--line:#232326;--fg:#f2f2f0;--muted:#a3a3a0;--soft:#6d6d6b;--acc:#c7b3ff;--pill:rgba(24,24,27,.82)}
 html.light{--bg:#fafaf8;--card:#f1f0ec;--line:#e3e2dd;--fg:#141414;--muted:#5d5d59;--soft:#9a9994;--acc:#6c4fd8;--pill:rgba(255,255,255,.86)}
 *{box-sizing:border-box}
 html{-webkit-tap-highlight-color:transparent;scroll-behavior:smooth;scroll-padding-top:24px}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:'Google Sans Flex',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55;transition:background-color .35s ease,color .35s ease;padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:'Geist',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55;transition:background-color .35s ease,color .35s ease;padding-bottom:calc(96px + env(safe-area-inset-bottom))}
 a{color:inherit}
 [hidden]{display:none !important}
-h1,h2,h3,.hd{font-family:'Garet','Google Sans Flex',sans-serif;font-weight:400;letter-spacing:-.01em}
+h1,h2,h3,.hd{font-family:'Faculty Glyphic',Georgia,serif;font-weight:400;letter-spacing:-.005em}
 .wrap{max-width:720px;margin:0 auto;padding:0 20px}
 
 /* home */
 .intro{padding:56px 0 8px}
 .who{display:flex;align-items:center;gap:16px}
-.ph{width:76px;height:76px;flex:none;border-radius:22px;overflow:hidden;background:linear-gradient(140deg,#2b2340,#6c4fd8 60%,#c7b3ff);display:flex;align-items:center;justify-content:center;font-family:'Garet',sans-serif;font-size:26px;color:#fff;letter-spacing:.02em}
+.ph{width:76px;height:76px;flex:none;border-radius:22px;overflow:hidden;background:linear-gradient(140deg,#2b2340,#6c4fd8 60%,#c7b3ff);display:flex;align-items:center;justify-content:center;font-family:'Faculty Glyphic',Georgia,serif;font-size:26px;color:#fff;letter-spacing:.02em}
 .ph img{width:100%;height:100%;object-fit:cover;display:block}
 .who h1{font-size:clamp(24px,6.4vw,34px);line-height:1.1;margin:0}
 .who p{margin:4px 0 0;color:var(--muted);font-size:16px}
@@ -49,7 +49,7 @@ section.blk{padding:76px 0 6px}
 /* experience */
 .xr{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:2px 14px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
 .xr:first-child{border-top:1px solid var(--line)}
-.logo{width:40px;height:40px;border-radius:50%;background:var(--card);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:'Garet',sans-serif;font-size:15px;color:var(--acc)}
+.logo{width:40px;height:40px;border-radius:50%;background:var(--card);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:'Faculty Glyphic',Georgia,serif;font-size:15px;color:var(--acc)}
 .logo.om{background:#fff;border-color:#fff;overflow:hidden}
 .logo svg,.logo img{width:100%;height:100%;display:block;object-fit:contain}
 .xr .rl{display:block;font-size:17px}
@@ -64,7 +64,7 @@ section.blk{padding:76px 0 6px}
 .pv .live{position:absolute;inset:0;overflow:hidden;background:#fff}
 .pv iframe{position:absolute;top:0;left:0;border:0;transform-origin:0 0;pointer-events:none;opacity:0;transition:opacity .45s ease;background:#fff}
 .pv iframe.on{opacity:1}
-.cv{position:absolute;inset:0;padding:12px;display:flex;flex-direction:column;justify-content:space-between;font-family:ui-monospace,'SFMono-Regular',Menlo,monospace;font-size:clamp(9px,2.4vw,12px);line-height:1.5;color:#cfd3dc}
+.cv{position:absolute;inset:0;padding:12px;display:flex;flex-direction:column;justify-content:space-between;font-family:'Geist Mono',ui-monospace,Menlo,monospace;font-size:clamp(9px,2.4vw,12px);line-height:1.5;color:#cfd3dc}
 .cv b{font-weight:400;color:#8fe3b0}
 .cv .chips{display:flex;flex-wrap:wrap;gap:4px}
 .cv .chips span{padding:2px 7px;border-radius:999px;background:rgba(255,255,255,.08);color:#e9e9ee}
@@ -75,11 +75,30 @@ section.blk{padding:76px 0 6px}
 .pi .y span:last-child{color:var(--acc)}
 
 /* skills: pills with an icon circle */
-.sk{display:flex;flex-wrap:wrap;gap:10px}
-.chip{display:flex;align-items:center;gap:10px;padding:8px 16px 8px 8px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:15px;flex:1 1 auto;min-width:0}
+.sk{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.chip{display:flex;align-items:center;gap:10px;padding:8px 14px 8px 8px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:15px;line-height:1.25;min-width:0;min-height:44px;box-sizing:border-box}
+@media (max-width:420px){.chip{font-size:13.5px;border-radius:16px;gap:8px}}
 .chip i{width:26px;height:26px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--acc) 22%,transparent);color:var(--acc)}
 .chip i svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.chip small{color:var(--muted);font-size:13px;margin-left:auto;padding-left:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* footer terminal */
+.term{margin-top:30px;border:1px solid var(--line);border-radius:16px;background:#0f0f12;color:#d6d8de;overflow:hidden;max-width:600px;font-family:'Geist Mono',ui-monospace,monospace}
+html.light .term{background:#151519}
+.tbar{display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.08);font-size:12px;color:#8b8d96}
+.tbar i{width:9px;height:9px;border-radius:50%;background:#3a3a42}
+.tbar span{margin-left:8px}
+.live{margin-left:auto;display:flex;align-items:center;gap:6px;font-weight:500;color:#7ee2a8}
+.live em{width:7px;height:7px;border-radius:50%;background:#3ddc84;box-shadow:0 0 0 0 rgba(61,220,132,.6);animation:pulse 1.8s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 7px rgba(61,220,132,0)}100%{box-shadow:0 0 0 0 rgba(61,220,132,0)}}
+#tout{margin:0;padding:14px 16px 4px;min-height:9.6em;font:inherit;font-size:clamp(11px,3vw,13px);line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere}
+#tout .p{color:#c7b3ff}#tout .ok{color:#7ee2a8}#tout .dim{color:#8b8d96}
+#tout .cur{display:inline-block;width:.55em;height:1.1em;vertical-align:-2px;background:#c7b3ff;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.tact{display:flex;align-items:center;gap:8px;padding:10px 14px 14px;opacity:0;transform:translateY(6px);transition:opacity .4s,transform .4s}
+.tact.on{opacity:1;transform:none}
+.run{font-family:'Geist',sans-serif;font-size:14px;text-decoration:none;color:#0c0c0d;background:#c7b3ff;padding:9px 16px;border-radius:999px}
+.rerun{margin-left:auto;background:none;border:1px solid rgba(255,255,255,.12);color:#8b8d96;width:34px;height:34px;border-radius:50%;font-size:15px;cursor:pointer}
+@media (prefers-reduced-motion:reduce){.live em,#tout .cur{animation:none}}
 
 /* footer */
 .foot{margin-top:88px;padding:48px 0 26px;border-top:1px solid var(--line)}
@@ -149,7 +168,6 @@ html.light .dock .moon{display:block}
       <h2 class="sh" id="exp-h">Work experience</h2>
       <div>
         <div class="xr"><span class="logo om" aria-hidden="true"><svg viewBox="0 0 40 40"><text x="5" y="26" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="17" fill="#3ea1dc">O</text><path d="M19 13h17l-4 14H15z" fill="#121212"/><text x="19" y="25" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="13" fill="#fff">m</text></svg></span><div><span class="rl">Web Development Intern</span><span class="co">Oceanmetrix Digital Technology</span></div><span class="yr">Jul — Oct 2026</span></div>
-        <div class="xr"><span class="logo om" aria-hidden="true"><img src="img/lasu.png" alt="" width="40" height="40"></span><div><span class="rl">Tutor</span><span class="co">Lagos State University</span></div><span class="yr">Sep — Oct 2026</span></div>
       </div>
     </section>
 
@@ -168,6 +186,11 @@ html.light .dock .moon{display:block}
     <div class="wrap">
       <h2>Want to work together?</h2>
       <p class="lead">I'm open to DevOps, cloud and frontend roles, internships and projects. Say hello and I'll get back to you.</p>
+      <div class="term" id="term" role="img" aria-label="A terminal deploying a collaboration: your idea created, Hikmah ready">
+        <div class="tbar"><i></i><i></i><i></i><span>hikmah@lagos: ~</span><b class="live"><em></em>Available</b></div>
+        <pre id="tout"></pre>
+        <div class="tact"><a class="run" href="mailto:hikmahayomide619@gmail.com">Ship it — send an email ↗</a><button type="button" class="rerun" id="rerun" aria-label="Replay">↻</button></div>
+      </div>
       <div class="frow">
         <div class="cl"><p class="ct">Contact</p><a href="mailto:hikmahayomide619@gmail.com">hikmahayomide619@gmail.com</a><a href="https://www.linkedin.com/in/hikmah-ayomide-b94433367" rel="noopener">LinkedIn ↗</a></div>
         <p class="copy">© Hikmah<br>2026</p>
@@ -279,14 +302,47 @@ html.light .dock .moon{display:block}
     bulb: '<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>'
   };
   var S = [
-    ['cloud', 'Cloud Computing', 'AWS · EKS'], ['gear', 'DevOps Engineering', 'Git · GitHub'], ['box', 'Containers', 'Docker · Compose · Kubernetes'],
-    ['eye', 'Monitoring & Observability', 'Prometheus · Grafana · Loki · Fluent Bit · Jaeger'], ['code', 'Web Development', 'HTML · CSS'],
-    ['db', 'Database Management', 'SQL'], ['term', 'Linux Administration', 'Ubuntu'], ['doc', 'Technical Documentation', ''],
-    ['bulb', 'Problem-Solving', ''], ['talk', 'Teaching & Communication', '']
+    ['gear', 'DevOps Engineering'], ['cloud', 'Cloud Computing'],
+    ['box', 'Containers'], ['eye', 'Monitoring & Observability'],
+    ['term', 'Linux Administration'], ['db', 'Database Management'],
+    ['code', 'Web Development'], ['doc', 'Technical Documentation'],
+    ['bulb', 'Problem-Solving'], ['talk', 'Teaching & Communication']
   ];
   document.getElementById('sk').innerHTML = S.map(function (s) {
-    return '<div class="chip"><i aria-hidden="true"><svg viewBox="0 0 24 24">' + IC[s[0]] + '</svg></i>' + esc(s[1]) + (s[2] ? '<small>' + esc(s[2]) + '</small>' : '') + '</div>';
+    return '<div class="chip"><i aria-hidden="true"><svg viewBox="0 0 24 24">' + IC[s[0]] + '</svg></i>' + '<span>' + esc(s[1]) + '</span></div>';
   }).join('');
+
+  // Footer terminal: kubectl apply collaboration.yaml
+  (function () {
+    var out = document.getElementById('tout'), act = document.querySelector('.tact'), box = document.getElementById('term'), timer, played = false;
+    var CMD = 'kubectl apply -f collaboration.yaml';
+    var LINES = [
+      ['dim', 'namespace/your-team configured'],
+      ['', 'deployment.apps/your-idea created'],
+      ['', 'service/hikmah exposed (devops, cloud, frontend)'],
+      ['ok', '✔ rollout complete — 1/1 Ready. Waiting on you…']
+    ];
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function full() { return '<span class="p">$</span> ' + CMD + '\n' + LINES.map(function (l) { return '<span class="' + l[0] + '">' + l[1] + '</span>'; }).join('\n'); }
+    function play() {
+      clearTimeout(timer); act.classList.remove('on');
+      if (reduce) { out.innerHTML = full(); act.classList.add('on'); return; }
+      var i = 0, n = 0;
+      (function type() {
+        if (i <= CMD.length) { out.innerHTML = '<span class="p">$</span> ' + CMD.slice(0, i++) + '<span class="cur"></span>'; timer = setTimeout(type, 38); return; }
+        if (n < LINES.length) {
+          n++; out.innerHTML = '<span class="p">$</span> ' + CMD + '\n' + LINES.slice(0, n).map(function (l) { return '<span class="' + l[0] + '">' + l[1] + '</span>'; }).join('\n') + (n < LINES.length ? '' : ' <span class="cur"></span>');
+          timer = setTimeout(type, n === 1 ? 420 : 520); return;
+        }
+        act.classList.add('on');
+      })();
+    }
+    out.innerHTML = '<span class="p">$</span> <span class="cur"></span>';
+    document.getElementById('rerun').addEventListener('click', play);
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es, ob) { es.forEach(function (e) { if (e.isIntersecting && !played) { played = true; play(); ob.disconnect(); } }); }, { threshold: .4 }).observe(box);
+    } else play();
+  })();
 
   // Views
   var home = document.getElementById('home'), av = document.getElementById('aboutview'), dv = document.getElementById('docview');
