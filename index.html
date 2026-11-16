@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Taiye Hikmah — DevOps &amp; Frontend Engineer</title>
+<meta name="description" content="Taiye Hikmah Ayomide — DevOps and frontend engineer in Lagos. Cloud, Kubernetes, observability and web development.">
+<meta property="og:title" content="Taiye Hikmah — DevOps & Frontend Engineer">
+<meta property="og:description" content="Cloud, Kubernetes, observability and the web.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0c0c0d">
+<link rel="icon" href="img/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="icon" href="img/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="img/favicon-192.png">
+<link rel="preload" href="fonts/Garet.woff" as="font" type="font/woff" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,300..700&display=swap" rel="stylesheet">
+<script>try{if(localStorage.getItem('hikmah-theme')==='light')document.documentElement.classList.add('light')}catch(e){}</script>
+<style>
+@font-face{font-family:'Garet';src:url(fonts/Garet.woff) format('woff');font-weight:400;font-display:swap}
+:root{--bg:#0c0c0d;--card:#151517;--line:#232326;--fg:#f2f2f0;--muted:#a3a3a0;--soft:#6d6d6b;--acc:#c7b3ff;--pill:rgba(24,24,27,.82)}
+html.light{--bg:#fafaf8;--card:#f1f0ec;--line:#e3e2dd;--fg:#141414;--muted:#5d5d59;--soft:#9a9994;--acc:#6c4fd8;--pill:rgba(255,255,255,.86)}
+*{box-sizing:border-box}
+html{-webkit-tap-highlight-color:transparent;scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:'Google Sans Flex',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55;transition:background-color .35s ease,color .35s ease;padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+a{color:inherit}
+[hidden]{display:none !important}
+h1,h2,h3,.hd{font-family:'Garet','Google Sans Flex',sans-serif;font-weight:400;letter-spacing:-.01em}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+
+/* home */
+.intro{padding:56px 0 8px}
+.who{display:flex;align-items:center;gap:16px}
+.ph{width:76px;height:76px;flex:none;border-radius:22px;overflow:hidden;background:linear-gradient(140deg,#2b2340,#6c4fd8 60%,#c7b3ff);display:flex;align-items:center;justify-content:center;font-family:'Garet',sans-serif;font-size:26px;color:#fff;letter-spacing:.02em}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.who h1{font-size:clamp(24px,6.4vw,34px);line-height:1.1;margin:0}
+.who p{margin:4px 0 0;color:var(--muted);font-size:16px}
+.intro p.t{font-size:18px;line-height:1.65;color:color-mix(in srgb,var(--fg) 74%,var(--bg));margin:26px 0 0}
+.intro p.t+p.t{margin-top:14px}
+
+section.blk{padding:76px 0 6px}
+.sh{font-size:22px;margin:0 0 20px;display:flex;align-items:center;gap:10px}
+.sh::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--acc)}
+
+/* experience */
+.xr{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:2px 14px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.xr:first-child{border-top:1px solid var(--line)}
+.logo{width:40px;height:40px;border-radius:50%;background:var(--card);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:'Garet',sans-serif;font-size:15px;color:var(--acc)}
+.logo.om{background:#fff;border-color:#fff;overflow:hidden}
+.logo svg,.logo img{width:100%;height:100%;display:block;object-fit:contain}
+.xr .rl{display:block;font-size:17px}
+.xr .co{display:block;color:var(--muted);font-size:14px;margin-top:2px}
+.xr .yr{color:var(--muted);font-size:14px;white-space:nowrap}
+
+/* projects: preview left, name + year right */
+.pl{display:flex;flex-direction:column;gap:14px}
+.pr{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:14px;align-items:start;text-decoration:none;color:var(--fg);padding:10px;border-radius:20px;border:1px solid var(--line);background:var(--card);transition:border-color .25s ease}
+.pr:hover{border-color:var(--acc)}
+.pv{position:relative;width:100%;border-radius:14px;overflow:hidden;aspect-ratio:4/3;background:#1d1d21}
+.pv .live{position:absolute;inset:0;overflow:hidden;background:#fff}
+.pv iframe{position:absolute;top:0;left:0;border:0;transform-origin:0 0;pointer-events:none;opacity:0;transition:opacity .45s ease;background:#fff}
+.pv iframe.on{opacity:1}
+.cv{position:absolute;inset:0;padding:12px;display:flex;flex-direction:column;justify-content:space-between;font-family:ui-monospace,'SFMono-Regular',Menlo,monospace;font-size:clamp(9px,2.4vw,12px);line-height:1.5;color:#cfd3dc}
+.cv b{font-weight:400;color:#8fe3b0}
+.cv .chips{display:flex;flex-wrap:wrap;gap:4px}
+.cv .chips span{padding:2px 7px;border-radius:999px;background:rgba(255,255,255,.08);color:#e9e9ee}
+.pi{display:flex;flex-direction:column;justify-content:space-between;padding:6px 6px 6px 0;min-width:0}
+.pi h3{font-size:clamp(17px,4.6vw,24px);line-height:1.15;margin:0}
+.pi p{margin:8px 0 0;color:var(--muted);font-size:14px;line-height:1.5}
+.pi .y{color:var(--muted);font-size:14px;margin-top:12px;display:flex;justify-content:space-between;gap:8px}
+.pi .y span:last-child{color:var(--acc)}
+
+/* skills: pills with an icon circle */
+.sk{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:flex;align-items:center;gap:10px;padding:8px 16px 8px 8px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:15px;flex:1 1 auto;min-width:0}
+.chip i{width:26px;height:26px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--acc) 22%,transparent);color:var(--acc)}
+.chip i svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.chip small{color:var(--muted);font-size:13px;margin-left:auto;padding-left:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* footer */
+.foot{margin-top:88px;padding:48px 0 26px;border-top:1px solid var(--line)}
+.foot h2{font-size:clamp(34px,9vw,58px);line-height:1.04;margin:0}
+.foot .lead{color:var(--muted);font-size:17px;margin:14px 0 0;max-width:520px}
+.frow{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-top:40px;padding-top:22px;border-top:1px solid var(--line)}
+.ct{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);margin:0 0 8px}
+.cl a{display:block;text-decoration:none;font-size:16px;margin:4px 0;overflow-wrap:anywhere}
+.cl a:hover{color:var(--acc)}
+.copy{text-align:right;color:var(--muted);font-size:14px;margin:0;white-space:nowrap}
+.made{color:var(--soft);font-size:13px;margin:18px 0 0}
+
+/* floating nav bar */
+.dock{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:30;display:flex;align-items:center;gap:2px;padding:6px;border-radius:999px;background:var(--pill);border:1px solid var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 12px 34px rgba(0,0,0,.28)}
+.dock a,.dock button{width:44px;height:44px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:var(--fg);background:none;border:0;cursor:pointer;text-decoration:none;transition:background .2s ease}
+.dock a:hover,.dock button:hover,.dock [aria-expanded="true"]{background:color-mix(in srgb,var(--fg) 10%,transparent)}
+.dock svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.dock .sep{width:1px;height:22px;background:var(--line);margin:0 2px}
+.dock .moon{display:none}
+html.light .dock .sun{display:none}
+html.light .dock .moon{display:block}
+
+/* sub pages */
+.sub{padding-top:28px}
+.back{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;margin-left:-10px;border-radius:10px;color:var(--muted);text-decoration:none}
+.back svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sub h1{font-size:clamp(34px,9vw,52px);line-height:1.05;margin:16px 0 10px}
+.sub p{color:color-mix(in srgb,var(--fg) 76%,var(--bg));font-size:17px;line-height:1.7;margin:0 0 16px}
+.facts{border-top:1px solid var(--line);margin-top:26px}
+.facts div{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.facts span:first-child{color:var(--muted)}
+.dtabs{display:flex;gap:6px;margin:12px 0 0;border-bottom:1px solid var(--line)}
+.dtabs a{min-height:44px;display:inline-flex;align-items:center;padding:0 14px;color:var(--muted);text-decoration:none;border-bottom:2px solid transparent;margin-bottom:-1px}
+.dtabs a[aria-current="page"]{color:var(--fg);border-color:var(--acc)}
+.sheet-prev{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.25)}
+.sheet-prev img{display:block;width:100%;height:auto}
+.dlb{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;margin-top:22px;border-radius:999px;background:var(--fg);color:var(--bg);text-decoration:none;font-weight:500}
+
+@media (max-width:599px){.pi p{display:none}.pr{align-items:stretch}.pv{aspect-ratio:auto;height:100%;min-height:120px}}
+@media (min-width:900px){
+  .wrap{max-width:980px;padding:0 40px}
+  .intro{padding:110px 0 8px}
+  .ph{width:96px;height:96px;border-radius:26px;font-size:32px}
+  .who h1{font-size:40px}
+  .intro p.t{font-size:20px;max-width:760px}
+  section.blk{padding:110px 0 6px}
+  .sh{font-size:26px}
+  .pl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<main id="home">
+  <div class="wrap">
+    <section class="intro" id="top" aria-label="Intro">
+      <div class="who">
+        <div class="ph"><img src="img/hikmah.webp" alt="Taiye Hikmah" width="400" height="400"></div>
+        <div><h1>Taiye Hikmah</h1><p>DevOps &amp; Frontend Engineer</p></div>
+      </div>
+      <p class="t">I deploy, watch over and build for the web: running applications on Kubernetes in AWS, wiring up monitoring, logging and tracing so problems show up before users feel them, and building clean websites in HTML and CSS.</p>
+      <p class="t">I study Computer Science Education at Lagos State University, and teaching keeps me good at the part of engineering people forget: explaining it clearly.</p>
+    </section>
+
+    <section class="blk" id="experience" aria-labelledby="exp-h">
+      <h2 class="sh" id="exp-h">Work experience</h2>
+      <div>
+        <div class="xr"><span class="logo om" aria-hidden="true"><svg viewBox="0 0 40 40"><text x="5" y="26" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="17" fill="#3ea1dc">O</text><path d="M19 13h17l-4 14H15z" fill="#121212"/><text x="19" y="25" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="13" fill="#fff">m</text></svg></span><div><span class="rl">Web Development Intern</span><span class="co">Oceanmetrix Digital Technology</span></div><span class="yr">Jul — Oct 2026</span></div>
+        <div class="xr"><span class="logo om" aria-hidden="true"><img src="img/lasu.png" alt="" width="40" height="40"></span><div><span class="rl">Tutor</span><span class="co">Lagos State University</span></div><span class="yr">Sep — Oct 2026</span></div>
+      </div>
+    </section>
+
+    <section class="blk" id="projects" aria-labelledby="pr-h">
+      <h2 class="sh" id="pr-h">Projects</h2>
+      <div class="pl" id="pl"></div>
+    </section>
+
+    <section class="blk" id="skills" aria-labelledby="sk-h">
+      <h2 class="sh" id="sk-h">Skills</h2>
+      <div class="sk" id="sk"></div>
+    </section>
+  </div>
+
+  <footer class="foot" id="contact">
+    <div class="wrap">
+      <h2>Want to work together?</h2>
+      <p class="lead">I'm open to DevOps, cloud and frontend roles, internships and projects. Say hello and I'll get back to you.</p>
+      <div class="frow">
+        <div class="cl"><p class="ct">Contact</p><a href="mailto:hikmahayomide619@gmail.com">hikmahayomide619@gmail.com</a><a href="https://www.linkedin.com/in/hikmah-ayomide-b94433367" rel="noopener">LinkedIn ↗</a></div>
+        <p class="copy">© Hikmah<br>2026</p>
+      </div>
+      <p class="made">Made by Àmúró &amp; Klaus</p>
+    </div>
+  </footer>
+</main>
+
+<main id="aboutview" hidden>
+  <div class="wrap sub">
+    <a class="back" href="#top" aria-label="Back"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg></a>
+    <div class="who" style="margin-top:12px"><div class="ph"><img src="img/hikmah.webp" alt="Taiye Hikmah" width="400" height="400"></div><div><h1 style="margin:0;font-size:clamp(26px,7vw,40px)">About me</h1><p>Taiye Hikmah Ayomide</p></div></div>
+    <p style="margin-top:28px">I'm a DevOps and frontend engineer from Lagos. My work sits where code meets the servers it runs on: containerising applications with Docker, deploying them to Kubernetes on Amazon EKS, and making them observable with Prometheus, Grafana, Loki, Fluent Bit and Jaeger.</p>
+    <p>I started on the web, with HTML and CSS during my internship at Oceanmetrix, and that's still how I like to see things through: from the page a person sees to the infrastructure behind it.</p>
+    <p>I'm studying Computer Science Education at Lagos State University. Teaching has shaped how I work: I document what I build, and I like making technical things easy to understand.</p>
+    <div class="facts">
+      <div><span>Based in</span><span>Lagos, Nigeria</span></div>
+      <div><span>Studying</span><span>B.Sc. Computer Science Education, LASU</span></div>
+      <div><span>CGPA</span><span>4.53 / 5.00</span></div>
+      <div><span>Graduating</span><span>2028</span></div>
+    </div>
+  </div>
+</main>
+
+
+<main id="docview" hidden>
+  <div class="wrap sub">
+    <a class="back" href="#top" aria-label="Back"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg></a>
+    <div class="dtabs" role="navigation" aria-label="Documents"><a href="#resume" id="d-resume">Resume</a><a href="#cover-letter" id="d-cover-letter">Cover letter</a></div>
+    <h1 id="dtitle">Resume</h1>
+    <p>Preview. Download the PDF below.</p>
+    <div class="sheet-prev"><img id="dimg" alt="" decoding="async"></div>
+    <a class="dlb" id="dlink" href="#" download>Download PDF</a>
+  </div>
+</main>
+
+
+<nav class="dock" aria-label="Main">
+  <a href="#top" aria-label="Home"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg></a>
+  <a href="#resume" aria-label="Resume"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"></path><path d="M14 3v5h5M10 13h6M10 17h6"></path></svg></a>
+  <a href="#about" aria-label="About"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v6M12 7.5v.01"></path></svg></a>
+  <a href="mailto:hikmahayomide619@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="M4 7l8 6 8-6"></path></svg></a>
+  <a href="https://www.linkedin.com/in/hikmah-ayomide-b94433367" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"></path></svg></a>
+  <span class="sep" aria-hidden="true"></span>
+  <button id="mode" aria-label="Switch to light mode">
+    <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18M6.5 18a5.5 5.5 0 0 1 11 0M12 6.5V4M5.6 9.6 3.9 7.9M18.4 9.6l1.7-1.7M8 21h8"></path></svg>
+    <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14.5A7.5 7.5 0 0 1 9.5 5a7.5 7.5 0 1 0 9.5 9.5z"></path></svg>
+  </button>
+</nav>
+
+<script>
+(function () {
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  var root = document.documentElement;
+
+  // Theme
+  var meta = document.querySelector('meta[name="theme-color"]'), mode = document.getElementById('mode');
+  function setTheme(light) {
+    root.classList.toggle('light', light);
+    if (meta) meta.setAttribute('content', light ? '#fafaf8' : '#0c0c0d');
+    mode.setAttribute('aria-label', light ? 'Switch to dark mode' : 'Switch to light mode');
+    try { localStorage.setItem('hikmah-theme', light ? 'light' : 'dark'); } catch (e) {}
+  }
+  setTheme(root.classList.contains('light'));
+  mode.addEventListener('click', function () { setTheme(!root.classList.contains('light')); });
+
+  // Projects
+  var P = [
+    { name: 'Brew and Bloom', year: '2026', kind: 'Website · HTML & CSS', url: 'https://brewandbloomy.netlify.app/', live: true,
+      d: 'A website designed and built from scratch: structure, styling and layout.' },
+    { name: 'Robot Shop on EKS', year: '2026', kind: 'DevOps capstone', url: 'https://github.com/hikmah2006TA/devops-capstone-starter-kit/tree/main/capstone-2-robot-shop',
+      d: 'Deployed to Amazon EKS with Prometheus and Grafana monitoring, Loki and Fluent Bit logging, Jaeger tracing, dashboards and alerts.',
+      code: ['<b>$</b> kubectl get pods -n robot-shop', 'cart-7d9…   1/1  Running', 'web-5c4…    1/1  Running'], chips: ['EKS', 'Prometheus', 'Grafana', 'Loki', 'Jaeger'] },
+    { name: 'Voting App', year: '2026', kind: 'DevOps capstone', url: 'https://github.com/hikmah2006TA/devops-capstone-starter-kit/tree/main/capstone-1-voting-app',
+      d: 'Containerised and deployed a voting application with Docker and Docker Compose, then on Kubernetes in AWS.',
+      code: ['<b>$</b> docker compose up -d', '✔ vote    Started', '✔ result  Started'], chips: ['Docker', 'Compose', 'Kubernetes', 'AWS'] },
+    { name: 'Student Database', year: '2026', kind: 'SQL', url: '',
+      d: 'Designed and populated a student database, then created, managed and queried its records.',
+      code: ['<b>SELECT</b> name, level', '<b>FROM</b> students', '<b>WHERE</b> cgpa &gt;= 4.5;'], chips: ['SQL', 'Database design'] }
+  ];
+  var conn = navigator.connection || {};
+  var LIVE = window.self === window.top && !conn.saveData && !/(^|-)2g$/.test(conn.effectiveType || '');
+  document.getElementById('pl').innerHTML = P.map(function (p) {
+    var pv = p.live && LIVE ? '<div class="live"><iframe data-src="' + esc(p.url) + '" title="' + esc(p.name) + ' preview" tabindex="-1" aria-hidden="true" sandbox="allow-scripts allow-same-origin" referrerpolicy="no-referrer"></iframe></div>'
+      : '<div class="cv" aria-hidden="true"><div>' + (p.code || []).join('<br>') + '</div><div class="chips">' + (p.chips || []).map(function (c) { return '<span>' + esc(c) + '</span>'; }).join('') + '</div></div>';
+    var tag = p.url ? 'a' : 'div';
+    return '<' + tag + ' class="pr"' + (p.url ? ' href="' + esc(p.url) + '" rel="noopener"' : '') + '><div class="pv">' + pv + '</div>' +
+      '<div class="pi"><div><h3>' + esc(p.name) + '</h3><p>' + esc(p.d) + '</p></div><div class="y"><span>' + esc(p.year) + '</span><span>' + (p.url ? '↗' : '') + '</span></div></div></' + tag + '>';
+  }).join('');
+  var VW = 1280;
+  function fit(box) { var f = box.querySelector('iframe'); if (!f) return; var w = box.clientWidth, h = box.clientHeight; if (!w) return; var s = w / VW; f.style.width = VW + 'px'; f.style.height = Math.ceil(h / s) + 'px'; f.style.transform = 'scale(' + s + ')'; }
+  function swap(f, on) { var n = f.cloneNode(false); n.classList.remove('on'); if (on) { n.setAttribute('src', f.getAttribute('data-src')); n.addEventListener('load', function () { n.classList.add('on'); }); } else n.removeAttribute('src'); f.parentNode.replaceChild(n, f); fit(n.parentNode); }
+  var near = 'IntersectionObserver' in window ? new IntersectionObserver(function (es) { es.forEach(function (e) { var f = e.target.querySelector('iframe'); if (!f) return; if (e.isIntersecting) { if (!f.getAttribute('src')) swap(f, true); } else if (f.getAttribute('src')) swap(f, false); }); }, { rootMargin: '400px' }) : null;
+  document.querySelectorAll('.live').forEach(function (b) { fit(b); if (near) near.observe(b); else swap(b.querySelector('iframe'), true); });
+  var rf = 0; window.addEventListener('resize', function () { cancelAnimationFrame(rf); rf = requestAnimationFrame(function () { document.querySelectorAll('.live').forEach(fit); }); });
+
+  // Skills
+  var IC = {
+    cloud: '<path d="M7 18h10a4 4 0 0 0 .5-8A6 6 0 0 0 6 9.5 4.3 4.3 0 0 0 7 18z"/>',
+    gear: '<circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/>',
+    code: '<path d="M8 8l-4 4 4 4M16 8l4 4-4 4"/>',
+    db: '<ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/>',
+    term: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 10l3 2-3 2M12 15h5"/>',
+    doc: '<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/>',
+    eye: '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+    box: '<path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/>',
+    talk: '<path d="M4 5h16v11H9l-5 4z"/>',
+    bulb: '<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>'
+  };
+  var S = [
+    ['cloud', 'Cloud Computing', 'AWS · EKS'], ['gear', 'DevOps Engineering', 'Git · GitHub'], ['box', 'Containers', 'Docker · Compose · Kubernetes'],
+    ['eye', 'Monitoring & Observability', 'Prometheus · Grafana · Loki · Fluent Bit · Jaeger'], ['code', 'Web Development', 'HTML · CSS'],
+    ['db', 'Database Management', 'SQL'], ['term', 'Linux Administration', 'Ubuntu'], ['doc', 'Technical Documentation', ''],
+    ['bulb', 'Problem-Solving', ''], ['talk', 'Teaching & Communication', '']
+  ];
+  document.getElementById('sk').innerHTML = S.map(function (s) {
+    return '<div class="chip"><i aria-hidden="true"><svg viewBox="0 0 24 24">' + IC[s[0]] + '</svg></i>' + esc(s[1]) + (s[2] ? '<small>' + esc(s[2]) + '</small>' : '') + '</div>';
+  }).join('');
+
+  // Views
+  var home = document.getElementById('home'), av = document.getElementById('aboutview'), dv = document.getElementById('docview');
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  var homeY = 0;
+  function jump(y) { window.scrollTo({ top: y, left: 0, behavior: 'instant' }); }
+  function only(v) { if (!home.hidden && v !== home) homeY = window.scrollY; [home, av, dv].forEach(function (m) { m.hidden = m !== v; }); }
+  function route() {
+    var h = (location.hash || '').slice(1);
+    if (h === 'about') { document.title = 'About — Taiye Hikmah'; only(av); jump(0); return; }
+    if (h === 'resume' || h === 'cover-letter') {
+      var cv = h === 'resume', name = cv ? 'Taiye Hikmah Resume' : 'Taiye Hikmah Cover Letter';
+      document.getElementById('dtitle').textContent = cv ? 'Resume' : 'Cover letter';
+      var im = document.getElementById('dimg'); im.src = cv ? 'docs/cv-preview.webp' : 'docs/cover-letter-preview.webp'; im.alt = name;
+      var dl = document.getElementById('dlink'); dl.href = 'docs/' + encodeURIComponent(name) + '.pdf'; dl.setAttribute('download', name + '.pdf');
+      document.getElementById('d-resume').setAttribute('aria-current', cv ? 'page' : 'false');
+      document.getElementById('d-cover-letter').setAttribute('aria-current', cv ? 'false' : 'page');
+      document.title = (cv ? 'Resume' : 'Cover letter') + ' — Taiye Hikmah';
+      only(dv); jump(0); return;
+    }
+    document.title = 'Taiye Hikmah — DevOps & Frontend Engineer';
+    var was = home.hidden; only(home);
+    var el = h && document.getElementById(h);
+    if (el) { if (was) requestAnimationFrame(function () { el.scrollIntoView({ behavior: 'instant', block: 'start' }); }); }
+    else if (was) requestAnimationFrame(function () { jump(homeY); });
+    requestAnimationFrame(function () { document.querySelectorAll('.live').forEach(fit); });
+  }
+  window.addEventListener('hashchange', route);
+  route();
+})();
+</script>
+</body>
+</html>
