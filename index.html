@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Taiye Hikmah — DevOps &amp; Frontend Engineer</title>
+<meta name="description" content="Taiye Hikmah Ayomide — certified DevOps Engineer and frontend developer in Lagos. Cloud, Kubernetes, observability and web development.">
+<meta property="og:title" content="Taiye Hikmah — DevOps & Frontend Engineer">
+<meta property="og:description" content="Cloud, Kubernetes, observability and the web.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0c0c0d">
+<link rel="icon" href="/favicon.ico?v=2" sizes="any">
+<link rel="icon" href="/img/favicon-48.png?v=2" type="image/png" sizes="48x48">
+<link rel="icon" href="/img/favicon-192.png?v=2" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/img/apple-touch.png?v=2">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="fonts/FacultyGlyphic-Regular.woff" as="font" type="font/woff" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>try{if(localStorage.getItem('hikmah-theme')==='light')document.documentElement.classList.add('light')}catch(e){}</script>
+<style>
+@font-face{font-family:'Faculty Glyphic';src:url(fonts/FacultyGlyphic-Regular.woff) format('woff');font-weight:400;font-display:swap}
+:root{--bg:#0c0c0d;--card:#151517;--line:#232326;--fg:#f2f2f0;--muted:#a3a3a0;--soft:#6d6d6b;--acc:#c7b3ff;--pill:rgba(24,24,27,.82)}
+html.light{--bg:#fafaf8;--card:#f1f0ec;--line:#e3e2dd;--fg:#141414;--muted:#5d5d59;--soft:#9a9994;--acc:#6c4fd8;--pill:rgba(255,255,255,.86)}
+*{box-sizing:border-box}
+html{-webkit-tap-highlight-color:transparent;scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:'Geist',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55;transition:background-color .35s ease,color .35s ease;padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+a{color:inherit}
+[hidden]{display:none !important}
+h1,h2,h3,.hd{font-family:'Faculty Glyphic',Georgia,serif;font-weight:400;letter-spacing:-.005em}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+
+/* home */
+.intro{padding:56px 0 8px}
+.who{display:flex;align-items:center;gap:16px}
+.ph{width:76px;height:76px;flex:none;border-radius:22px;overflow:hidden;background:linear-gradient(140deg,#2b2340,#6c4fd8 60%,#c7b3ff);display:flex;align-items:center;justify-content:center;font-family:'Faculty Glyphic',Georgia,serif;font-size:26px;color:#fff;letter-spacing:.02em}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.who h1{font-size:clamp(24px,6.4vw,34px);line-height:1.1;margin:0}
+.who p{margin:4px 0 0;color:var(--muted);font-size:16px}
+.intro p.t{font-size:18px;line-height:1.65;color:color-mix(in srgb,var(--fg) 74%,var(--bg));margin:26px 0 0}
+.intro p.t+p.t{margin-top:14px}
+
+section.blk{padding:76px 0 6px}
+.sh{font-size:22px;margin:0 0 20px;display:flex;align-items:center;gap:10px}
+.sh::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--acc)}
+
+/* experience */
+.xr{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:2px 14px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.xr:first-child{border-top:1px solid var(--line)}
+.logo{width:40px;height:40px;border-radius:50%;background:var(--card);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:'Faculty Glyphic',Georgia,serif;font-size:15px;color:var(--acc)}
+.logo.om{background:#fff;border-color:#fff;overflow:hidden}
+.logo svg,.logo img{width:100%;height:100%;display:block;object-fit:contain}
+.xr .rl{display:block;font-size:17px}
+.xr .co{display:block;color:var(--muted);font-size:14px;margin-top:2px}
+.xr .yr{color:var(--muted);font-size:14px;white-space:nowrap}
+
+/* projects: preview left, name + year right */
+.pl{display:flex;flex-direction:column;gap:14px}
+.pr{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:14px;align-items:start;text-decoration:none;color:var(--fg);padding:10px;border-radius:20px;border:1px solid var(--line);background:var(--card);transition:border-color .25s ease}
+.pr:hover{border-color:var(--acc)}
+.pv{position:relative;width:100%;border-radius:14px;overflow:hidden;aspect-ratio:4/3;background:#1d1d21}
+.pv .live{position:absolute;inset:0;overflow:hidden;background:#fff}
+.pv iframe{position:absolute;top:0;left:0;border:0;transform-origin:0 0;pointer-events:none;opacity:0;transition:opacity .45s ease;background:#fff}
+.pv iframe.on{opacity:1}
+.cv{position:absolute;inset:0;padding:12px;display:flex;flex-direction:column;justify-content:space-between;font-family:'Geist Mono',ui-monospace,Menlo,monospace;font-size:clamp(9px,2.4vw,12px);line-height:1.5;color:#cfd3dc}
+.cv b{font-weight:400;color:#8fe3b0}
+.cv .chips{display:flex;flex-wrap:wrap;gap:4px}
+.cv .chips span{padding:2px 7px;border-radius:999px;background:rgba(255,255,255,.08);color:#e9e9ee}
+.pi{display:flex;flex-direction:column;justify-content:space-between;padding:6px 6px 6px 0;min-width:0}
+.pi h3{font-size:clamp(17px,4.6vw,24px);line-height:1.15;margin:0}
+.pi p{margin:8px 0 0;color:var(--muted);font-size:14px;line-height:1.5}
+.pi .y{color:var(--muted);font-size:14px;margin-top:12px;display:flex;justify-content:space-between;gap:8px}
+.pi .y span:last-child{color:var(--acc)}
+
+/* skills: pills with an icon circle */
+.sk{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.chip{display:flex;align-items:center;gap:10px;padding:8px 14px 8px 8px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:15px;line-height:1.25;min-width:0;min-height:44px;box-sizing:border-box}
+@media (max-width:420px){.chip{font-size:13.5px;border-radius:16px;gap:8px}}
+.chip i{width:26px;height:26px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--acc) 22%,transparent);color:var(--acc)}
+.chip i svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* footer terminal */
+.term{margin-top:30px;border:1px solid var(--line);border-radius:16px;background:#0f0f12;color:#d6d8de;overflow:hidden;max-width:600px;font-family:'Geist Mono',ui-monospace,monospace}
+html.light .term{background:#151519}
+.tbar{display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.08);font-size:12px;color:#8b8d96}
+.tbar i{width:9px;height:9px;border-radius:50%;background:#3a3a42}
+.tbar span{margin-left:8px}
+.live{margin-left:auto;display:flex;align-items:center;gap:6px;font-weight:500;color:#7ee2a8}
+.live em{width:7px;height:7px;border-radius:50%;background:#3ddc84;box-shadow:0 0 0 0 rgba(61,220,132,.6);animation:pulse 1.8s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 7px rgba(61,220,132,0)}100%{box-shadow:0 0 0 0 rgba(61,220,132,0)}}
+#tout{margin:0;padding:14px 16px 4px;min-height:9.6em;font:inherit;font-size:clamp(11px,3vw,13px);line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere}
+#tout .p{color:#c7b3ff}#tout .ok{color:#7ee2a8}#tout .dim{color:#8b8d96}
+#tout .cur{display:inline-block;width:.55em;height:1.1em;vertical-align:-2px;background:#c7b3ff;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.tact{display:flex;align-items:center;gap:8px;padding:10px 14px 14px;opacity:0;transform:translateY(6px);transition:opacity .4s,transform .4s}
+.tact.on{opacity:1;transform:none}
+.run{font-family:'Geist',sans-serif;font-size:14px;text-decoration:none;color:#0c0c0d;background:#c7b3ff;padding:9px 16px;border-radius:999px}
+.rerun{margin-left:auto;background:none;border:1px solid rgba(255,255,255,.12);color:#8b8d96;width:34px;height:34px;border-radius:50%;font-size:15px;cursor:pointer}
+@media (prefers-reduced-motion:reduce){.live em,#tout .cur{animation:none}}
+
+/* footer */
+.foot{margin-top:88px;padding:48px 0 26px;border-top:1px solid var(--line)}
+.foot h2{font-size:clamp(34px,9vw,58px);line-height:1.04;margin:0}
+.foot .lead{color:var(--muted);font-size:17px;margin:14px 0 0;max-width:520px}
+.frow{display:flex;justify-content:space-between;align-items:stretch;gap:16px;margin-top:40px;padding-top:22px;border-top:1px solid var(--line)}
+.ct{font-size:13px;line-height:20px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);margin:0 0 12px}
+.cl{min-width:0}
+.soc{display:flex;gap:10px}
+.soc a{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);display:flex;align-items:center;justify-content:center;color:var(--fg);text-decoration:none;transition:color .2s,border-color .2s,transform .2s}
+.soc a:hover{color:var(--acc);border-color:var(--acc);transform:translateY(-2px)}
+.soc svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.copy{align-self:flex-start;font-family:'Faculty Glyphic',Georgia,serif;color:var(--fg);font-size:14px;line-height:20px;margin:0;white-space:nowrap}
+.made{color:var(--soft);font-size:13px;margin:18px 0 0}
+
+/* floating nav bar */
+.dock{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:30;display:flex;align-items:center;gap:2px;padding:5px;border-radius:14px;background:var(--pill);border:1px solid var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 10px 30px rgba(0,0,0,.28);max-width:calc(100vw - 24px)}
+.dock a,.dock button{height:38px;min-width:38px;padding:0 10px;box-sizing:border-box;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;gap:0;color:var(--muted);background:none;border:1px solid transparent;cursor:pointer;text-decoration:none;font:500 13px/1 'Geist',system-ui,sans-serif;white-space:nowrap;transition:background .25s ease,color .25s ease,border-color .25s ease,gap .25s ease}
+.dock a:hover,.dock button:hover{color:var(--fg)}
+.dock .on{color:var(--fg);background:color-mix(in srgb,var(--fg) 9%,transparent);border-color:color-mix(in srgb,var(--fg) 10%,transparent);gap:7px}
+.dock .lb{display:inline-block;max-width:0;opacity:0;overflow:hidden;transition:max-width .3s ease,opacity .2s ease}
+.dock .on .lb{max-width:84px;opacity:1}
+.dock svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.dock .sep{width:1px;height:20px;background:var(--line);margin:0 3px;flex:none}
+.dock .moon{display:none}
+html.light .dock .sun{display:none}
+html.light .dock .moon{display:block}
+@media (prefers-reduced-motion:reduce){.dock .lb,.dock a{transition:none}}
+
+
+/* certificates */
+.cert{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:14px;align-items:center;text-decoration:none;color:var(--fg);padding:12px;border-radius:20px;border:1px solid var(--line);background:var(--card);transition:border-color .25s ease}
+.cert:hover{border-color:var(--acc)}
+.ci{display:flex;flex-direction:column;gap:6px;padding:4px 2px 4px 6px;min-width:0}
+.ci h3{font-size:clamp(17px,4.6vw,24px);line-height:1.15;margin:0}
+.ci p{margin:0;color:var(--muted);font-size:15px}
+.ci .y{color:var(--muted);font-size:14px}
+.ct{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.ct img{display:block;width:100%;height:auto}
+@media (min-width:900px){.cert{grid-template-columns:minmax(0,1fr) minmax(0,400px);gap:24px;padding:16px 16px 16px 26px}.ci{padding-left:0}.ct{justify-self:end;width:100%}}
+
+/* sub pages */
+.sub{padding-top:28px}
+.back{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;margin-left:-10px;border-radius:10px;color:var(--muted);text-decoration:none}
+.back svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sub h1{font-size:clamp(34px,9vw,52px);line-height:1.05;margin:16px 0 10px}
+.sub p{color:color-mix(in srgb,var(--fg) 76%,var(--bg));font-size:17px;line-height:1.7;margin:0 0 16px}
+.facts{border-top:1px solid var(--line);margin-top:26px}
+.facts div{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.facts span:first-child{color:var(--muted)}
+.dtabs{display:flex;gap:6px;margin:12px 0 0;border-bottom:1px solid var(--line)}
+.dtabs a{min-height:44px;display:inline-flex;align-items:center;padding:0 14px;color:var(--muted);text-decoration:none;border-bottom:2px solid transparent;margin-bottom:-1px}
+.dtabs a[aria-current="page"]{color:var(--fg);border-color:var(--acc)}
+.sheet-prev{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.25)}
+.sheet-prev img{display:block;width:100%;height:auto}
+.dlb{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;margin-top:22px;border-radius:999px;background:var(--fg);color:var(--bg);text-decoration:none;font-weight:500}
+
+@media (max-width:599px){.pi p{display:none}.pr{align-items:stretch}.pv{aspect-ratio:auto;height:100%;min-height:120px}}
+@media (min-width:900px){
+  .wrap{max-width:980px;padding:0 40px}
+  .intro{padding:110px 0 8px}
+  .ph{width:96px;height:96px;border-radius:26px;font-size:32px}
+  .who h1{font-size:40px}
+  .intro p.t{font-size:20px;max-width:760px}
+  section.blk{padding:110px 0 6px}
+  .sh{font-size:26px}
+  .pl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<main id="home">
+  <div class="wrap">
+    <section class="intro" id="top" aria-label="Intro">
+      <div class="who">
+        <div class="ph"><img src="img/hikmah-hood.webp" alt="Taiye Hikmah" width="400" height="400"></div>
+        <div><h1>Taiye Hikmah</h1><p>DevOps &amp; Frontend Engineer</p></div>
+      </div>
+      <p class="t">I'm a certified DevOps Engineer. I deploy, watch over and build for the web. That means running applications on Kubernetes in AWS, wiring up monitoring, logging and tracing so problems show up before users feel them, and building clean websites in HTML and CSS.</p>
+      <p class="t">I study Computer Science Education at Lagos State University, and teaching keeps me good at the part of engineering people forget, which is explaining it clearly.</p>
+    </section>
+
+    <section class="blk" id="experience" aria-labelledby="exp-h">
+      <h2 class="sh" id="exp-h">Work Experience</h2>
+      <div>
+        <div class="xr"><span class="logo om" aria-hidden="true"><svg viewBox="0 0 40 40"><text x="5" y="26" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="17" fill="#3ea1dc">O</text><path d="M19 13h17l-4 14H15z" fill="#121212"/><text x="19" y="25" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="13" fill="#fff">m</text></svg></span><div><span class="rl">Web Development Intern</span><span class="co">Oceanmetrix Digital Technology</span></div><span class="yr">Jul — Oct 2026</span></div>
+      </div>
+    </section>
+
+    <section class="blk" id="certificates" aria-labelledby="ce-h">
+      <h2 class="sh" id="ce-h">Certificates</h2>
+      <a class="cert" href="#certificate" aria-label="View the DevOps Engineering certificate from TS Academy">
+        <div class="ci"><h3>DevOps Engineering</h3><p>TS Academy, Hajime Cohort</p><span class="y">Jun — Nov 2026</span></div>
+        <div class="ct"><img src="docs/certificate-thumb.webp" alt="Certificate of completion in DevOps Engineering from TS Academy, awarded to Hikmah Taiye" width="720" height="414" loading="lazy" decoding="async"></div>
+      </a>
+    </section>
+
+    <section class="blk" id="projects" aria-labelledby="pr-h">
+      <h2 class="sh" id="pr-h">Projects</h2>
+      <div class="pl" id="pl"></div>
+    </section>
+
+    <section class="blk" id="skills" aria-labelledby="sk-h">
+      <h2 class="sh" id="sk-h">Skills</h2>
+      <div class="sk" id="sk"></div>
+    </section>
+  </div>
+
+  <footer class="foot" id="contact">
+    <div class="wrap">
+      <h2>Want to work together?</h2>
+      <p class="lead">I'm open to DevOps, cloud and frontend roles, internships and projects. Say hello and I'll get back to you.</p>
+      <div class="term" id="term" role="img" aria-label="A terminal deploying a collaboration: your idea created, Hikmah ready">
+        <div class="tbar"><i></i><i></i><i></i><span>hikmah@lagos: ~</span><b class="live"><em></em>Available</b></div>
+        <pre id="tout"></pre>
+        <div class="tact"><a class="run" href="mailto:hikmahayomide619@gmail.com">Ship it — send an email ↗</a><button type="button" class="rerun" id="rerun" aria-label="Replay">↻</button></div>
+      </div>
+      <div class="frow">
+        <div class="cl">
+          <p class="ct">Contact</p>
+          <div class="soc">
+          <a href="mailto:hikmahayomide619@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="M4 7l8 6 8-6"></path></svg></a>
+          <a href="https://www.linkedin.com/in/hikmah-ayomide-b94433367" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"></path></svg></a>
+          <a href="https://github.com/hikmah2006TA" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a>
+        </div>
+        </div>
+        <p class="copy">© Hikmah 2026</p>
+      </div>
+      <p class="made">Made by Àmúró &amp; Klaus</p>
+    </div>
+  </footer>
+</main>
+
+<main id="aboutview" hidden>
+  <div class="wrap sub">
+    <a class="back" href="#top" aria-label="Back"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg></a>
+    <div class="who" style="margin-top:12px"><div class="ph"><img src="img/hikmah.webp" alt="Taiye Hikmah" width="400" height="400"></div><div><h1 style="margin:0;font-size:clamp(26px,7vw,40px)">About me</h1><p>Taiye Hikmah Ayomide</p></div></div>
+    <p style="margin-top:28px">I'm a DevOps and frontend engineer from Lagos, certified in DevOps Engineering by TS Academy in November 2026. My work sits where code meets the servers it runs on, from containerising applications with Docker, deploying them to Kubernetes on Amazon EKS, and making them observable with Prometheus, Grafana, Loki, Fluent Bit and Jaeger.</p>
+    <p>I started on the web, with HTML and CSS during my internship at Oceanmetrix, and that's still how I like to see things through, from the page a person sees to the infrastructure behind it.</p>
+    <p>I'm studying Computer Science Education at Lagos State University. Teaching has shaped how I work. I document what I build, and I like making technical things easy to understand.</p>
+    <p>Outside of work, I unwind with K-dramas and C-dramas, and during free periods at school you'll usually find me playing Blood Strike with my friends.</p>
+    <div class="facts">
+      <div><span>Based in</span><span>Lagos, Nigeria</span></div>
+      <div><span>Studying</span><span>B.Sc. Computer Science Education, LASU</span></div>
+      <div><span>CGPA</span><span>4.53 / 5.00</span></div>
+      <div><span>Graduating</span><span>2028</span></div>
+      <div><span>Certified</span><span>DevOps Engineering, TS Academy</span></div>
+    </div>
+  </div>
+</main>
+
+
+<main id="docview" hidden>
+  <div class="wrap sub">
+    <a class="back" href="#top" aria-label="Back"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg></a>
+    <div class="dtabs" role="navigation" aria-label="Documents"><a href="#resume" id="d-resume">Resume</a><a href="#cover-letter" id="d-cover-letter">Cover letter</a><a href="#certificate" id="d-certificate">Certificate</a></div>
+    <h1 id="dtitle">Resume</h1>
+    <p>Preview. Download the PDF below.</p>
+    <div class="sheet-prev"><img id="dimg" alt="" decoding="async"></div>
+    <a class="dlb" id="dlink" href="#" download>Download PDF</a>
+  </div>
+</main>
+
+
+<nav class="dock" aria-label="Main">
+  <a href="#top" data-k="home" aria-label="Home"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg><span class="lb">Home</span></a>
+  <a href="#resume" data-k="resume" aria-label="Resume"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"></path><path d="M14 3v5h5M10 13h6M10 17h6"></path></svg><span class="lb">Resume</span></a>
+  <a href="#about" data-k="about" aria-label="About"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v6M12 7.5v.01"></path></svg><span class="lb">About</span></a>
+  <span class="sep" aria-hidden="true"></span>
+  <a href="mailto:hikmahayomide619@gmail.com" data-k="email" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="M4 7l8 6 8-6"></path></svg><span class="lb">Email</span></a>
+  <a href="https://www.linkedin.com/in/hikmah-ayomide-b94433367" target="_blank" rel="noopener" data-k="linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"></path></svg><span class="lb">LinkedIn</span></a>
+  <span class="sep" aria-hidden="true"></span>
+  <button id="mode" aria-label="Switch to light mode">
+    <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18M6.5 18a5.5 5.5 0 0 1 11 0M12 6.5V4M5.6 9.6 3.9 7.9M18.4 9.6l1.7-1.7M8 21h8"></path></svg>
+    <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14.5A7.5 7.5 0 0 1 9.5 5a7.5 7.5 0 1 0 9.5 9.5z"></path></svg>
+  </button>
+</nav>
+
+<script>
+(function () {
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  var root = document.documentElement;
+
+  // Theme
+  var meta = document.querySelector('meta[name="theme-color"]'), mode = document.getElementById('mode');
+  function setTheme(light) {
+    root.classList.toggle('light', light);
+    if (meta) meta.setAttribute('content', light ? '#fafaf8' : '#0c0c0d');
+    mode.setAttribute('aria-label', light ? 'Switch to dark mode' : 'Switch to light mode');
+    try { localStorage.setItem('hikmah-theme', light ? 'light' : 'dark'); } catch (e) {}
+  }
+  setTheme(root.classList.contains('light'));
+  mode.addEventListener('click', function () { setTheme(!root.classList.contains('light')); });
+
+  // Projects
+  var P = [
+    { name: 'Brew and Bloom', year: '2026', kind: 'Website · HTML & CSS', url: 'https://brewandbloomy.netlify.app/', live: true,
+      d: 'A website designed and built from scratch, from structure to styling and layout.' },
+    { name: 'Robot Shop on EKS', year: '2026', kind: 'DevOps capstone', url: 'https://github.com/hikmah2006TA/devops-capstone-starter-kit/tree/main/capstone-2-robot-shop',
+      d: 'Deployed to Amazon EKS with Prometheus and Grafana monitoring, Loki and Fluent Bit logging, Jaeger tracing, dashboards and alerts.',
+      code: ['<b>$</b> kubectl get pods -n robot-shop', 'cart-7d9…   1/1  Running', 'web-5c4…    1/1  Running'], chips: ['EKS', 'Prometheus', 'Grafana', 'Loki', 'Jaeger'] },
+    { name: 'Voting App', year: '2026', kind: 'DevOps capstone', url: 'https://github.com/hikmah2006TA/devops-capstone-starter-kit/tree/main/capstone-1-voting-app',
+      d: 'Containerised and deployed a voting application with Docker and Docker Compose, then on Kubernetes in AWS.',
+      code: ['<b>$</b> docker compose up -d', '✔ vote    Started', '✔ result  Started'], chips: ['Docker', 'Compose', 'Kubernetes', 'AWS'] },
+    { name: 'Student Database', year: '2026', kind: 'SQL', url: '',
+      d: 'Designed and populated a student database, then created, managed and queried its records.',
+      code: ['<b>SELECT</b> name, level', '<b>FROM</b> students', '<b>WHERE</b> cgpa &gt;= 4.5;'], chips: ['SQL', 'Database design'] }
+  ];
+  var conn = navigator.connection || {};
+  var LIVE = window.self === window.top && !conn.saveData && !/(^|-)2g$/.test(conn.effectiveType || '');
+  document.getElementById('pl').innerHTML = P.map(function (p) {
+    var pv = p.live && LIVE ? '<div class="live"><iframe data-src="' + esc(p.url) + '" title="' + esc(p.name) + ' preview" tabindex="-1" aria-hidden="true" sandbox="allow-scripts allow-same-origin" referrerpolicy="no-referrer"></iframe></div>'
+      : '<div class="cv" aria-hidden="true"><div>' + (p.code || []).join('<br>') + '</div><div class="chips">' + (p.chips || []).map(function (c) { return '<span>' + esc(c) + '</span>'; }).join('') + '</div></div>';
+    var tag = p.url ? 'a' : 'div';
+    return '<' + tag + ' class="pr"' + (p.url ? ' href="' + esc(p.url) + '" rel="noopener"' : '') + '><div class="pv">' + pv + '</div>' +
+      '<div class="pi"><div><h3>' + esc(p.name) + '</h3><p>' + esc(p.d) + '</p></div><div class="y"><span>' + esc(p.year) + '</span><span>' + (p.url ? '↗' : '') + '</span></div></div></' + tag + '>';
+  }).join('');
+  var VW = 1280;
+  function fit(box) { var f = box.querySelector('iframe'); if (!f) return; var w = box.clientWidth, h = box.clientHeight; if (!w) return; var s = w / VW; f.style.width = VW + 'px'; f.style.height = Math.ceil(h / s) + 'px'; f.style.transform = 'scale(' + s + ')'; }
+  function swap(f, on) { var n = f.cloneNode(false); n.classList.remove('on'); if (on) { n.setAttribute('src', f.getAttribute('data-src')); n.addEventListener('load', function () { n.classList.add('on'); }); } else n.removeAttribute('src'); f.parentNode.replaceChild(n, f); fit(n.parentNode); }
+  var near = 'IntersectionObserver' in window ? new IntersectionObserver(function (es) { es.forEach(function (e) { var f = e.target.querySelector('iframe'); if (!f) return; if (e.isIntersecting) { if (!f.getAttribute('src')) swap(f, true); } else if (f.getAttribute('src')) swap(f, false); }); }, { rootMargin: '400px' }) : null;
+  document.querySelectorAll('.live').forEach(function (b) { fit(b); if (near) near.observe(b); else swap(b.querySelector('iframe'), true); });
+  var rf = 0; window.addEventListener('resize', function () { cancelAnimationFrame(rf); rf = requestAnimationFrame(function () { document.querySelectorAll('.live').forEach(fit); }); });
+
+  // Skills
+  var IC = {
+    cloud: '<path d="M7 18h10a4 4 0 0 0 .5-8A6 6 0 0 0 6 9.5 4.3 4.3 0 0 0 7 18z"/>',
+    gear: '<circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/>',
+    code: '<path d="M8 8l-4 4 4 4M16 8l4 4-4 4"/>',
+    db: '<ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/>',
+    term: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 10l3 2-3 2M12 15h5"/>',
+    doc: '<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/>',
+    eye: '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+    box: '<path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/>',
+    talk: '<path d="M4 5h16v11H9l-5 4z"/>',
+    bulb: '<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>'
+  };
+  var S = [
+    ['gear', 'DevOps Engineering'], ['cloud', 'Cloud Computing'],
+    ['db', 'Database Management'],
+    ['code', 'Web Development'], ['doc', 'Technical Documentation'],
+    ['bulb', 'Problem-Solving'], ['talk', 'Teaching & Communication']
+  ];
+  document.getElementById('sk').innerHTML = S.map(function (s) {
+    return '<div class="chip"><i aria-hidden="true"><svg viewBox="0 0 24 24">' + IC[s[0]] + '</svg></i>' + '<span>' + esc(s[1]) + '</span></div>';
+  }).join('');
+
+  // Footer terminal: kubectl apply collaboration.yaml
+  (function () {
+    var out = document.getElementById('tout'), act = document.querySelector('.tact'), box = document.getElementById('term'), timer, played = false;
+    var CMD = 'kubectl apply -f collaboration.yaml';
+    var LINES = [
+      ['dim', 'namespace/your-team configured'],
+      ['', 'deployment.apps/your-idea created'],
+      ['', 'service/hikmah exposed (devops, cloud, frontend)'],
+      ['ok', '✔ rollout complete — 1/1 Ready. Waiting on you…']
+    ];
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function full() { return '<span class="p">$</span> ' + CMD + '\n' + LINES.map(function (l) { return '<span class="' + l[0] + '">' + l[1] + '</span>'; }).join('\n'); }
+    function play() {
+      clearTimeout(timer); act.classList.remove('on');
+      if (reduce) { out.innerHTML = full(); act.classList.add('on'); return; }
+      var i = 0, n = 0;
+      (function type() {
+        if (i <= CMD.length) { out.innerHTML = '<span class="p">$</span> ' + CMD.slice(0, i++) + '<span class="cur"></span>'; timer = setTimeout(type, 38); return; }
+        if (n < LINES.length) {
+          n++; out.innerHTML = '<span class="p">$</span> ' + CMD + '\n' + LINES.slice(0, n).map(function (l) { return '<span class="' + l[0] + '">' + l[1] + '</span>'; }).join('\n') + (n < LINES.length ? '' : ' <span class="cur"></span>');
+          timer = setTimeout(type, n === 1 ? 420 : 520); return;
+        }
+        act.classList.add('on');
+      })();
+    }
+    out.innerHTML = '<span class="p">$</span> <span class="cur"></span>';
+    document.getElementById('rerun').addEventListener('click', play);
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es, ob) { es.forEach(function (e) { if (e.isIntersecting && !played) { played = true; play(); ob.disconnect(); } }); }, { threshold: .4 }).observe(box);
+    } else play();
+  })();
+
+  // Views
+  var home = document.getElementById('home'), av = document.getElementById('aboutview'), dv = document.getElementById('docview');
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  var homeY = 0;
+  function jump(y) { window.scrollTo({ top: y, left: 0, behavior: 'instant' }); }
+  function only(v) { if (!home.hidden && v !== home) homeY = window.scrollY; [home, av, dv].forEach(function (m) { m.hidden = m !== v; }); }
+  var dockA = [].slice.call(document.querySelectorAll('.dock a[data-k]'));
+  function mark(k) { dockA.forEach(function (a) { var on = a.getAttribute('data-k') === k; a.classList.toggle('on', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); }); }
+  dockA.forEach(function (a) { var k = a.getAttribute('data-k'); if (k === 'email' || k === 'linkedin') a.addEventListener('click', function () { mark(k); }); });
+  var DOCS = {
+    'resume': ['Resume', 'Taiye Hikmah Resume', 'docs/cv-preview.webp'],
+    'cover-letter': ['Cover letter', 'Taiye Hikmah Cover Letter', 'docs/cover-letter-preview.webp'],
+    'certificate': ['Certificate', 'Taiye Hikmah DevOps Engineering Certificate', 'docs/certificate-preview.webp']
+  };
+  function route() {
+    var h = (location.hash || '').slice(1);
+    var d = Object.prototype.hasOwnProperty.call(DOCS, h) ? DOCS[h] : null;
+    mark(h === 'about' ? 'about' : d ? 'resume' : 'home');
+    if (h === 'about') { document.title = 'About — Taiye Hikmah'; only(av); jump(0); return; }
+    if (d) {
+      document.getElementById('dtitle').textContent = d[0];
+      var im = document.getElementById('dimg'); im.src = d[2]; im.alt = d[1];
+      var dl = document.getElementById('dlink'); dl.href = 'docs/' + encodeURIComponent(d[1]) + '.pdf'; dl.setAttribute('download', d[1] + '.pdf');
+      Object.keys(DOCS).forEach(function (k) { document.getElementById('d-' + k).setAttribute('aria-current', k === h ? 'page' : 'false'); });
+      document.title = d[0] + ' — Taiye Hikmah';
+      only(dv); jump(0); return;
+    }
+    document.title = 'Taiye Hikmah — DevOps & Frontend Engineer';
+    var was = home.hidden; only(home);
+    var el = h && document.getElementById(h);
+    if (el) { if (was) requestAnimationFrame(function () { el.scrollIntoView({ behavior: 'instant', block: 'start' }); }); }
+    else if (was) requestAnimationFrame(function () { jump(homeY); });
+    requestAnimationFrame(function () { document.querySelectorAll('.live').forEach(fit); });
+  }
+  window.addEventListener('hashchange', route);
+  route();
+})();
+</script>
+</body>
+</html>
